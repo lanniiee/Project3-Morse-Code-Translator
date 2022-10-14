@@ -1,7 +1,6 @@
 import { alphabet } from "./morse-code-Obj.js";
 
 export const translateToMorseCode = (str) => {
-    const keys = Object.keys(alphabet);
     const strLowerCase = str.toLowerCase();
     let result = "";
     if (strLowerCase === "") {
@@ -17,4 +16,3 @@ export const translateToMorseCode = (str) => {
     }
     return result.trim();
 };
-
