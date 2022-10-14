@@ -1,8 +1,7 @@
-const { exportAllDeclaration } = require("@babel/types");
-const { it } = require("node:test");
+import { translateToMorseCode } from "./morse-code-translate"
 
 describe("translateToMorseCode", () => {
-    it("should translate A to *_", () => {
+    it("should translate A to .-", () => {
         const result = translateToMorseCode("A");
         expect(result).toBe(".-");
     });
@@ -19,7 +18,7 @@ describe("translateToMorseCode", () => {
 
     it("should test for valid character", () => {
         const result = translateToMorseCode("$@=#!");
-        expect(result).toBe("unavailable combination");
+        expect(result).toBe("invalid character included");
     });
 
     it("should translate HELLO to .... . .-.. .-.. ---", () => {
@@ -30,6 +29,11 @@ describe("translateToMorseCode", () => {
     it("should test for combination", () => {
         const result = translateToMorseCode("hello 123 &!");
         expect(result).toBe(".... . .-.. .-.. --- / .---- ..--- ...-- / .-... -.-.--");
+    })
+
+    it("should test for empty string", () => {
+        const result = translateToMorseCode("");
+        expect(result).toBe("Enter a valid text");
     })
 
 });
