@@ -11,7 +11,7 @@ export const translateToMorseCode = (str) => {
             result += alphabet[strLowerCase[i]];
         }
         else {
-            return result = "invalid character included";
+            return result = "invalid character detected";
         }
     }
     return result.trim();

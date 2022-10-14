@@ -18,7 +18,7 @@ describe("translateToMorseCode", () => {
 
     it("should test for valid character", () => {
         const result = translateToMorseCode("$@=#!");
-        expect(result).toBe("invalid character included");
+        expect(result).toBe("invalid character detected");
     });
 
     it("should translate HELLO to .... . .-.. .-.. ---", () => {
