@@ -1,4 +1,4 @@
-import { translateToMorseCode } from "./morse-code-translate"
+import { translateToMorseCode } from "./morse-code-translate.js"
 
 describe("translateToMorseCode", () => {
     it("should translate A to .-", () => {
